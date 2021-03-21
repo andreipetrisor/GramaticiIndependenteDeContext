@@ -1,0 +1,20 @@
+Cerinta se gaseste in fisierul tema-1-lfa.
+
+Pentru partea de lex am creat niste stari in care am dat skip la toate
+spatiile. Mi-am declarat toate simbolurile de care am avut nevoie cum ar fi
+litere mici, caractere speciale, terminali, nonterminali, spatii albe.
+In vectorul v am salvat elementele multimii V(din gramatica), in vectorul alfa
+am salvat elementele din alfabet, regulile le-am salvat intr-un multimap
+unde partea stanga a reprezentat cheia si partea dreapta valoarea, iar
+simbolul de start l-am salvat in variabila start.
+Pentru regulile de sintaxa am folosit starea . care afiseaza daca apare vreo
+eroare de sintaxa. Pentru erorile de semnatica am verificat tot ce cere la
+3.4 in enuntul temei. Pentru a afla nonterminalii utili am parcurs multimap-ul
+cu reguli intr-un while(true), din care ies doar daca nu mai pot marca niciun
+nonterminal. La fiecare iteratie(din while true) parcurg elementele din 
+multimap, iar pentru fiecare nonterminal din partea stanga nemarcat ca fiind
+util, verific daca partea dreapta poate fi considerata utila. Ca sa verific
+daca limbajul generat este vid, am verificat daca simbolul de start este util
+sau nu. Iar pentru a vedea daca contine sirul vid, in loc de nonterminalii
+utili, am verificat ca regulile sa se termine doar in e si apoi verificam daca
+se gaseste simbolul de start printre elemente.
